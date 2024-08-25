@@ -1,0 +1,43 @@
+{
+  "name": "use-hook-form-context-state",
+  "version": "1.0.1",
+  "description": "useHookFormContextState is a lightweight and efficient React hook designed to manage and persist state variables within the context of a React Hook Form. It simplifies state handling, ensuring seamless integration and improved maintainability of forms in your React applications.",
+  "main": "use-hook-form-context-state.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akshaychavan7/useHookFormContextState.git"
+  },
+  "keywords": [
+    "react",
+    "hook-form",
+    "context",
+    "react-hook-form",
+    "form-state",
+    "react-hook-form-state",
+    "form-management",
+    "custom-hook",
+    "react-hook",
+    "form-context",
+    "state-management",
+    "react-forms",
+    "useHookFormContextState",
+    "nested-forms",
+    "react-form-utils",
+    "react-form-state",
+    "use-form-state",
+    "react-custom-hook"
+  ],
+  "author": "Akshay Chavan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/akshaychavan7/useHookFormContextState/issues"
+  },
+  "homepage": "https://github.com/akshaychavan7/useHookFormContextState#readme",
+  "peerDependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
