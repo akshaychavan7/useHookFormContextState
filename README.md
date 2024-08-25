@@ -14,10 +14,20 @@ Managing forms in React can quickly become complex, especially when dealing with
 
 **useHookFormContextState** offers a streamlined solution by allowing you to maintain state directly within the context of your React Hook Form. Instead of managing numerous state variables and passing them down through layers of components, you can leverage this hook to manage your form's state at a central point. This results in cleaner, more readable code and a more intuitive form management experience.
 
+### Similar to React's useState Hook
+
+If you're familiar with React's `useState()` hook, you'll find **useHookFormContextState** very intuitive. It provides the same feel and usability:
+
+-   **State Management**: Like `useState()`, **useHookFormContextState** returns an array with two elements: the current state value and a function to update that value.
+    
+-   **Ease of Use**: You can use it just like `useState()` but with the added benefit of integrating seamlessly with `react-hook-form`. This makes it easier to manage form-related state without lifting state up or drilling props down through deeply nested components.
+    
+-   **Context-Aware**: Unlike `useState()`, this hook is designed specifically for managing state within the `react-hook-form` context, ensuring that all state updates are consistent with the form's internal state.
+
 ## Installation
 You can install the library via npm:
 
-    npm install useHookFormContextState
+    npm install use-hook-form-context-state
 
 ## Usage
 Here's how to use useHookFormContextState in a React component:
@@ -26,7 +36,7 @@ Here's how to use useHookFormContextState in a React component:
 
     import React from 'react';
     import { useForm } from 'react-hook-form';
-    import useHookFormContextState from 'useHookFormContextState';
+    import useHookFormContextState from 'use-hook-form-context-state';
     
     const MyForm = () => {
       const { control, handleSubmit } = useForm();
@@ -61,7 +71,7 @@ Consider a scenario where you have a multi-step form for creating a user profile
     import { useForm } from 'react-hook-form';
     import AddressForm from './AddressForm';
     import PersonalInfoForm from './PersonalInfoForm';
-    import useHookFormContextState from 'useHookFormContextState';
+    import useHookFormContextState from 'use-hook-form-context-state';
     
     const UserProfileForm = () => {
       const { control, handleSubmit } = useForm();
@@ -95,7 +105,7 @@ Consider a scenario where you have a multi-step form for creating a user profile
 **PersonalInfoForm.js**
 
     import React from 'react';
-    import useHookFormContextState from 'useHookFormContextState';
+    import useHookFormContextState from 'use-hook-form-context-state';
     
     const PersonalInfoForm = ({ control }) => {
       const [firstName, setFirstName] = useHookFormContextState(control, 'firstName', '');
@@ -129,7 +139,7 @@ Consider a scenario where you have a multi-step form for creating a user profile
 **AddressForm.js**
 
     import React from 'react';
-    import useHookFormContextState from 'useHookFormContextState';
+    import useHookFormContextState from 'use-hook-form-context-state';
     import CountrySelector from './CountrySelector';
     
     const AddressForm = ({ control }) => {
@@ -166,7 +176,7 @@ Consider a scenario where you have a multi-step form for creating a user profile
 **CountrySelector.js**
 
     import React from 'react';
-    import useHookFormContextState from 'useHookFormContextState';
+    import useHookFormContextState from 'use-hook-form-context-state';
     
     const CountrySelector = ({ control, setCountry }) => {
       const [selectedCountry, setSelectedCountry] = useHookFormContextState(control, 'address.country', '');
@@ -206,7 +216,7 @@ This approach keeps the code clean, maintainable, and avoids the common pitfalls
 ### TypeScript Basic Example
     import React from 'react';
     import { useForm, Control } from 'react-hook-form';
-    import useHookFormContextState from 'useHookFormContextState';
+    import useHookFormContextState from 'use-hook-form-context-state';
     
     type FormValues = {
       username: string;
@@ -256,10 +266,10 @@ This approach keeps the code clean, maintainable, and avoids the common pitfalls
 - **Returns [state, setState]:** Returns the current state and a function to update the state.
 
 ## Contributing
-Contributions, issues, and feature requests are welcome! Feel free to check the issues page for any issues or open a new one.
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues](https://github.com/akshaychavan7/useHookFormContextState/issues) page for any issues or open a new one.
 
 ## License
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/akshaychavan7/useHookFormContextState/blob/master/LICENSE) file for details.
 
 ##
 &copy; [Akshay Chavan](https://www.linkedin.com/in/akshaychavan7/)
